@@ -52,7 +52,7 @@ def perform(level, box, options):
 
 	print "MODE " + str(mode)
 	print "FIND " + find
-	print "REPLACE " + replace
+	print repr("Replace " + replace)
 
 	for (chunk, slices, point) in level.getChunkSlices(box):
 		for t in chunk.TileEntities:

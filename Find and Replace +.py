@@ -11,7 +11,7 @@ from pymclevel import TAG_Short
 from pymclevel import TAG_Double
 from pymclevel import TAG_String
 
-displayName = "FR"
+## displayName = ""
 
 colorChr = "%%"
 

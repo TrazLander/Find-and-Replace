@@ -31,8 +31,8 @@ inputs = (
 	("   Line 4", True ),
 	("Command Blocks", True ),
 	("Color Code Character", ("string","value=%%")),
-	("Find", ("string","value=NONE","width=500")),
-	("Text", ("string","value=NONE","width=500")),
+	("Find", ("string","value=","width=500")),
+	("Text", ("string","value=","width=500")),
 	("[] = Arguments required for selected mode. Capital letter = required, lowercase = optional input.", "label"),
 	("Mode", ("[F:T] Find and replace", "[f:T] Add", "       Iterate", "       Toggle Wall Sign", "[T]   Mass Find Replace")),
 )
@@ -133,10 +133,10 @@ def perform(level, box, options):
 def things(line, find, replace, mode, x, minx, maxx, y, miny, maxy, z, minz, maxz):
 	line = line.replace(unichr(167), colorChr)
 	if mode == 0:
-		if replace == "NONE":
+		if replace == "NONE" or replace == "None" or replace == "":
 			return formt(line.replace(find, ""))
 		else:	
-			if find == "NONE":
+			if find == "NONE" or find == "None" or find == "":
 				return formt(replace)
 			else:
 				return formt(line.replace(find, replace))
